@@ -42,7 +42,7 @@ function showFields() {
         // Show section image
         let imagePath = '';
         if (sectionType === "T-profile") {
-            imagePath = "images/t_profile.png"; // Specific path for T-profile
+            imagePath = "t_profile.png"; // Specific path for T-profile
         } else {
             imagePath = `images/${sectionType.replace(/\s+/g, '_').toLowerCase()}.png`;
         }
