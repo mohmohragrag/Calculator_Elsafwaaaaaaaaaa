@@ -129,7 +129,8 @@ function calculateWeight() {
 
             case "T-profile":
                 const [lengthT, widthT, heightT, thicknessT] = values;
-                weight = (lengthT / 1000) * ((widthT / 1000) * (heightT / 1000) - ((widthT - 2 * thicknessT) / 1000) * ((heightT - thicknessT) / 1000)) * density;
+                weight = (lengthT / 1000) * ((widthT / 1000) * (heightT / 1000) - ((widthT - thicknessT) / 1000) * ((heightT - thicknessT) / 1000)) * density;
+
                 break;
 
             case "Hexagonal Sections":
