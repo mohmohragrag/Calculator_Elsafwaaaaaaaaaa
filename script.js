@@ -148,7 +148,7 @@ function calculateWeight() {
         weight *= quantity;
 
         // Display the result
-        document.getElementById("result").innerHTML = `Total Weight: ${weight.toFixed(3)} kg`;
+        document.getElementById("result").innerHTML = `Total Weight: ${weight.toFixed(1)} kg`;
     } else {
         document.getElementById("result").innerHTML = "Please select a section type and enter valid dimensions.";
     }
