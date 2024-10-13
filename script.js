@@ -12,7 +12,6 @@ const steelSections = {
     "T-profile": ["Length (mm)", "Width (mm)", "Height (mm)", "Thickness (mm)"],
     "Hexagonal Sections": ["Length (mm)", "Flat to Flat Distance (mm)"]
 };
-
 function showFields() {
     const sectionType = document.getElementById("sectionType").value;
     const fieldsContainer = document.getElementById("fields");
@@ -40,12 +39,21 @@ function showFields() {
             fieldsContainer.appendChild(inputField);
         });
 
-        sectionImage.src = `images/${sectionType.replace(/\s+/g, '_').toLowerCase()}.png`;
+        // Show section image
+        let imagePath = '';
+        if (sectionType === "T-profile") {
+            imagePath = "images/t_profile.png"; // Specific path for T-profile
+        } else {
+            imagePath = `images/${sectionType.replace(/\s+/g, '_').toLowerCase()}.png`;
+        }
+        
+        sectionImage.src = imagePath;
         sectionImage.style.display = "block";
     } else {
         alert("Invalid section type selected. Please choose a valid option.");
     }
 }
+
 
 function calculateWeight() {
     const sectionType = document.getElementById("sectionType").value;
