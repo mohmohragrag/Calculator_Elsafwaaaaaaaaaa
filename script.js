@@ -42,7 +42,8 @@ function showFields() {
         // Show section image
         let imagePath = '';
         if (sectionType === "T-profile") {
-            imagePath = "t_profile.png"; // Specific path for T-profile
+                sectionImage.src = "https://raw.githubusercontent.com/mohmohragrag/Calculator_Elsafwaa/main/t_profile.png";
+
         } else {
             imagePath = `images/${sectionType.replace(/\s+/g, '_').toLowerCase()}.png`;
         }
